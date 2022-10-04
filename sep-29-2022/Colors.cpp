@@ -8,8 +8,19 @@ enum Color
 };
 int main ()
 {
-	toString(Color::Green);
-	toEnum("Red"); 
+	std::string _color_name;
+        std::cout << "Please enter color" << std::endl;
+        std::getline (std::cin, _color_name);
+
+        int _color_index;
+        std::cout << "Please enter color index" << std::endl;
+        std::cin >> _color_index;
+
+        std::cout << toString(_color_index) << std::endl;
+        std::cout << toEnum(_color_name) << std::endl;
+
+        return 0;
+
 }
 std::string toString (int a)
 {
